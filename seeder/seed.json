@@ -1,0 +1,18 @@
+{
+  "comentarios": {
+    "_model": "Comment",
+    "com1": {
+      "data": "2017-01-21",
+      "autor": "autor 1",
+      "comentario": "auuuuuuuuu"
+    }
+  },
+  "posts": {
+    "_model": "Post",
+    "0": {
+      "data": "2017-01-20",
+      "url": "https://simg.minhateca.com.br/29b7da040214fe652630df4032e1a02e90cb9479?url=http%3A%2F%2Fi62.tinypic.com%2F2mw9kr9.jpg",
+      "comentarios": ["->comentarios.com1"]
+    }
+  }
+}

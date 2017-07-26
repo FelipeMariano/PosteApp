@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//const seeder = require('./models/seeder.js');
+const seeder = require('./seeder/seeder.js');
 
 var app = express();
 var routePosts = require("./routes/posts");
@@ -48,14 +48,14 @@ if(app.get("env") === "development"){
 }
 
 //MONGODB:
-
+var dbUrl = "mongodb://localhost/poste";
 var mongoose = require("mongoose");
-  mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
-mongoose.connect("mongodb://localhost/poste").then(() => {
+mongoose.connect(dbUrl).then(() => {
   console.log("sucesso ao se conectar com mongodb!!|");
   //TODO
-  //seeder();
+  seeder();
 }).catch((err) => console.error(err));
 
 var port = process.env.PORT || 3000;
