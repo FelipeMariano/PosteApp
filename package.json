@@ -1,0 +1,27 @@
+{
+  "name": "posteapp",
+  "version": "1.0.0",
+  "description": "Backend",
+  "main": "app.js",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeMariano/PosteApp.git"
+  },
+  "author": "Felipe Mariano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeMariano/PosteApp/issues"
+  },
+  "homepage": "https://github.com/FelipeMariano/PosteApp#readme"
+}
