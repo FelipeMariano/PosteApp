@@ -2,7 +2,7 @@ var express = require("express");
 var Router = express.Router();
 
 var mongoose = require("mongoose");
-var Post =require("../models/Post");
+var Post = require("../models/Post");
 var Comm = require("../models/Comment");
 
 function getComentarios(post){
@@ -15,6 +15,7 @@ function getComentarios(post){
 }
 
 Router.get("/", function(req, res, next){
+  console.log(Post);
   Post.find(function(err, posts){
     // posts.forEach((post) => {
     //     post.numComentarios = getComentarios(post).length;
@@ -61,3 +62,5 @@ Router.post("/:id/comment", function(req, res, next){
     });
   });
 });
+
+module.exports = Router;

@@ -8,8 +8,8 @@ var PostSchema = new mongoose.Schema({
   comentarios: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment', childPath: 'post'}]
 });
 
-CardSchema.plugin(relationship, {
+PostSchema.plugin(relationship, {
   relationshipPathName: 'comentarios'
 });
 
-module.export = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Post", PostSchema);

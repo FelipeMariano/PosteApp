@@ -1,10 +1,10 @@
 var express = require("express");
-var router = express.Router();
+var Router = express.Router();
 
-router.get("/signin", function(req, res, next){
+Router.get("/signin", function(req, res, next){
   res.json({
     message: "Deu certo!"
   });
 });
 
-module.exports = router;
+module.exports = Router;
