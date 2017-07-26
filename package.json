@@ -5,7 +5,19 @@
   "main": "app.js",
   "dependencies": {
     "angular": "^1.6.4",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "body-parser": "~1.15.1",
+     "cookie-parser": "~1.4.3",
+     "crypto": "0.0.3",
+     "debug": "~2.2.0",
+     "ejs": "~2.4.1",
+     "express": "~4.13.4",
+     "jsonwebtoken": "^7.1.9",
+     "mongoose": "^4.6.4",
+     "mongoose-relationship": "^0.1.5",
+     "mongoose-seeder": "^1.2.1",
+     "morgan": "~1.7.0",
+     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
