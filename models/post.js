@@ -5,7 +5,7 @@ var PostSchema = new mongoose.Schema({
   data: Date,
   url: String,
   //user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
-  comentarios: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comments', childPath: 'post'}]
+  comentarios: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment', childPath: 'post'}]
 });
 
 CardSchema.plugin(relationship, {
