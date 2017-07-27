@@ -2,6 +2,7 @@
   "comentarios": {
     "_model": "Comment",
     "com1": {
+      "user": "123",
       "data": "2017-01-21",
       "autor": "autor 1",
       "comentario": "auuuuuuuuu"
