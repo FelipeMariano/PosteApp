@@ -7,12 +7,12 @@
       "role": "administrador"
     },
     "user1": {
-      "user": "usuario1",
+      "user": "renato",
       "password": "usuario1",
       "role": "usuario"
     },
     "user2":{
-      "user": "usuario2",
+      "user": "joaquim",
       "password": "usuario2",
       "role": "usuario"
     }
@@ -22,17 +22,23 @@
     "com1": {
       "user": "->usuarios.user1",
       "data": "2017-01-21",
-      "autor": "autor 1",
-      "comentario": "auuuuuuuuu"
+      "autor": "renato",
+      "comentario": "Que design impecável! Olha como é quadrada!!"
+    },
+    "com2": {
+      "user": "->usuarios.user2",
+      "data": "2017-01-21",
+      "autor": "joaquim",
+      "comentario": "Da pra perceber nitidamente que o modelo não se em caixa, RSRSRSRS brinkz. Gostei"
     }
   },
   "posts": {
     "_model": "Post",
     "0": {
-      "titulo": "Wolf!",
+      "titulo": "Nova caixa de comida dos funcionários (?)",
       "data": "2017-01-20",
-      "url": "https://simg.minhateca.com.br/29b7da040214fe652630df4032e1a02e90cb9479?url=http%3A%2F%2Fi62.tinypic.com%2F2mw9kr9.jpg",
-      "comentarios": ["->comentarios.com1"]
+      "url": "https://sc01.alicdn.com/kf/HTB1LHEyIVXXXXXBapXXq6xXFXXX5/Custom-disposable-food-box-frozen-food-packaging.jpg",
+      "comentarios": ["->comentarios.com1", "->comentarios.com2"]
     }
   }
 }

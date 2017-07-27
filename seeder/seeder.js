@@ -1,5 +1,6 @@
 var Post = require("../models/Post");
 var Comm = require("../models/Comment");
+var User = require("../models/User");
 var seeder = require("mongoose-seeder");
 var data = require("./seed.json");
 var mongoose = require("mongoose");

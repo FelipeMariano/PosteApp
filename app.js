@@ -10,6 +10,7 @@ const seeder = require("./seeder/seeder.js");
 var app = express();
 app.use(cors())
 var routePosts = require("./routes/posts");
+var routeAuth = require("./routes/auth.js");
 
 //AUTHENTICATION:
 //TODO
@@ -31,6 +32,7 @@ app.use(cookieParser());
 
 //ROTAS:
 app.use("/poste", routePosts);
+app.use("/authentication", routeAuth);
 
 //HANDLERS:
 app.use(function(req, res, next){
