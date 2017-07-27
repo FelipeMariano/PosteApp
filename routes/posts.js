@@ -15,12 +15,7 @@ function getComentarios(comentarios, callback){
 }
 
 Router.get("/", function(req, res, next){
-  console.log(Post);
   Post.find({}).sort({data: 'desc'}).exec(function(err, posts){
-    // posts.forEach((post) => {
-    //     post.numComentarios = getComentarios(post).length;
-    // });
-
     if(err) next(err);
 
     res.json(posts);

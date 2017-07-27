@@ -1,8 +1,26 @@
 {
+  "usuarios":{
+    "_model": "User",
+    "adm": {
+      "user": "mttechne",
+      "password": "mt123",
+      "role": "administrador"
+    },
+    "user1": {
+      "user": "usuario1",
+      "password": "usuario1",
+      "role": "usuario"
+    },
+    "user2":{
+      "user": "usuario2",
+      "password": "usuario2",
+      "role": "usuario"
+    }
+  },
   "comentarios": {
     "_model": "Comment",
     "com1": {
-      "user": "123",
+      "user": "->usuarios.user1",
       "data": "2017-01-21",
       "autor": "autor 1",
       "comentario": "auuuuuuuuu"
