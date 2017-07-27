@@ -5,12 +5,12 @@ var mongoose = require("mongoose");
 var Post = require("../models/Post");
 var Comm = require("../models/Comment");
 
-function getComentarios(post){
-  Comm.find({_id: {$in: post["comentarios"]}}).exec(function(err, comments){
+function getComentarios(comentarios, callback){
+  Comm.find({_id: {$in: comentarios}}).exec(function(err, comments){
 
     if(err) return [];
 
-    return comments;
+    callback(comments);
   });
 }
 
@@ -30,11 +30,12 @@ Router.get("/", function(req, res, next){
 
 Router.get("/:id", function(req, res, next){
   Post.findById(req.params.id, function(err, post){
-    post.comentarios = this.getComentarios(post);
-    if(err) next(err);
+    getComentarios(post.comentarios, (comments) => {
+      post.comentarios  = comments;
+      if(err) next(err);
 
-    res.json(post);
-
+      res.json(post);
+    });
   });
 });
 

@@ -1,23 +1,25 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-const seeder = require('./seeder/seeder.js');
+var express = require("express");
+var path = require("path");
+var favicon = require("serve-favicon");
+var logger = require("morgan");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var cors = require("cors");
+const seeder = require("./seeder/seeder.js");
 
 var app = express();
+app.use(cors())
 var routePosts = require("./routes/posts");
 
 //AUTHENTICATION:
 //TODO
-//var auth = require('./routes/authenticate');
-var jwt = require('jsonwebtoken');
-var configuration = require('./configuration');
+//var auth = require("./routes/authenticate");
+var jwt = require("jsonwebtoken");
+var configuration = require("./configuration");
 ////
 
 //adicionando o token
-app.set('secretToken', configuration.secretToken);
+app.set("secretToken", configuration.secretToken);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
