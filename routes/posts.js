@@ -59,4 +59,21 @@ Router.post("/:id/comment", function(req, res, next){
   });
 });
 
+Router.post("/:id/comment/delete", function(req, res, next){
+  Post.findById(req.params.id, function(err, post){
+    var id = req.body.idComentario;
+    if(err) next(err);
+
+    post.comentarios.remove(id);
+    post.save(function(errSavePost, savedPost){
+      getComentarios(post.comentarios, (comments) => {
+        post.comentarios  = comments;
+        if(err) next(err);
+
+        res.json(post);
+      });
+    });
+  });
+});
+
 module.exports = Router;
